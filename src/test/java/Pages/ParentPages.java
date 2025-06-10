@@ -20,15 +20,15 @@ public class ParentPages extends GWD {
     }
 
     public void myClick(WebElement element) {
-        scrollToElement(element);
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
+        scrollToElement(element);
         element.click();
     }
 
     public void mySendKeys(WebElement element, String text) {
-        scrollToElement(element);
         wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
         element.clear();
         element.sendKeys(text);
     }

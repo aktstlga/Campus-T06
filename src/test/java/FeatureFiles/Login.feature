@@ -8,6 +8,7 @@ Feature: Login functionality
     Then The user gets notification about invalid credentials
 
   Scenario:
+
     Given Navigate to Campus
     When The user writes username and password and clicks on login button
     Then The user verifies login successfully
