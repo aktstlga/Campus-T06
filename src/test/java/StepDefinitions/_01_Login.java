@@ -16,7 +16,7 @@ public class _01_Login {
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
-        GWD.getDriver().get("test.mersys.io");
+        GWD.getDriver().get("https://test.mersys.io");
     }
 
     @When("The user writes invalid username and password")
