@@ -33,17 +33,20 @@ public class _01_Login {
     @Then("The user gets notification about invalid credentials")
     public void theUserGetsNotificationAboutInvalid() {
         DC.verifyContainsText(DC.invalidNotification, "Invalid");
+        DialogContent.quitDriver();
     }
 
     @When("The user writes username and password and clicks on login button")
     public void theUserWritesUsernameAndPasswordAndClicksOnLoginButton() {
-        DC.mySendKeys(DC.username, ConfigReader.getProperty("username"));
-        DC.mySendKeys(DC.password, ConfigReader.getProperty("password"));
+        DC.mySendKeys(DC.username, "Student_6");
+        DC.mySendKeys(DC.password, "S12345");
+        DC.myClick(DC.loginButton);
     }
 
     @Then("The user verifies login successfully")
     public void theUserVerifiesLoginSuccessfully() {
         DC.verifyUrlContains("user");
         DC.verifyContainsText(DC.studentCheck, "S.");
+        DialogContent.quitDriver();
     }
 }
