@@ -50,7 +50,7 @@ public class ParentPages extends GWD {
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void WaitUntilVisible(WebElement element) {
+    public void waitUntilVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
