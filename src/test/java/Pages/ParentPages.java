@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -87,5 +88,14 @@ public class ParentPages extends GWD {
         wait.until(ExpectedConditions.visibilityOf(element));
         Select select = new Select(element);
         select.selectByVisibleText(text.trim());
+    }
+
+    public void forceVisible(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].style.display='block'; arguments[0].style.opacity=1; arguments[0].style.visibility='visible';", element);
+    }
+
+    public void waitForPresence(By locator) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 }
