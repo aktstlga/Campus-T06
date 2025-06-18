@@ -30,7 +30,7 @@ public class _02_ProfilePicture {
 
     @Then("The user clicks the save button")
     public void saveAndSuccesfully() {
-        TN.WaitUntilVisible(TN.saveButton);
+        TN.waitUntilVisible(TN.saveButton);
         TN.scrollToElement(TN.saveButton);
         TN.clickWithJS(TN.saveButton);
     }
