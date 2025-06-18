@@ -19,10 +19,10 @@ public class _03_ProfileTheme {
             List<WebElement> currentOptions = TN.themeOptions;
             WebElement theme = currentOptions.get(i);
 
-            TN.WaitUntilVisible(theme);
+            TN.waitUntilVisible(theme);
             TN.myClick(theme);
 
-            TN.WaitUntilVisible(TN.saveButton);
+            TN.waitUntilVisible(TN.saveButton);
             TN.scrollToElement(TN.saveButton);
             TN.clickWithJS(TN.saveButton);
 
