@@ -47,6 +47,5 @@ public class _01_Login {
     public void theUserVerifiesLoginSuccessfully() {
         DC.verifyUrlContains("user");
         DC.verifyContainsText(DC.studentCheck, "S.");
-        DialogContent.quitDriver();
     }
 }
