@@ -84,7 +84,7 @@ public class _04_HamburgerMenu {
         H.myClick(H.student);
         H.myClick(H.stripe);
         H.myClick(H.payment);
-        GWD.getDriver().switchTo().frame(1);
+        GWD.getDriver().switchTo().frame(H.iframe);
         H.mySendKeys(H.cardNumber, "4242 4242 4242 4242");
         H.mySendKeys(H.cardNumber, "12/14");
     }

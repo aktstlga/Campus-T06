@@ -62,7 +62,8 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement payButton;
     @FindBy(xpath = "//ms-currency-field[@id='ms-currency-field-0']/input")
     public WebElement amount;
-
+    @FindBy(css = "iframe[title='Secure payment input frame']")
+    public  WebElement iframe;
 
 
     @FindBy(xpath = "//div[@class='p-CardNumberInput']/div/input")
