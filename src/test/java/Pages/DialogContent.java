@@ -34,4 +34,31 @@ public class DialogContent extends ParentPages {
 
     @FindBy(css = "img[alt='TechnoStudy']")
     public WebElement technoStudyLogo;
+
+    @FindBy(css = ".popup-title")
+    public WebElement lessonTitle;
+
+    @FindBy(xpath = "//span[contains(@class,'mdc-tab__text-label') and contains(.,'Calendar')]")
+    public WebElement sideCalendarButton;
+
+    @FindBy(xpath = "//span[@class='fc-icon fc-icon-chevron-left']")
+    public WebElement previousIcon;
+
+    @FindBy(css = "button.fc-todayCalendar-button")
+    public WebElement todayIcon;
+
+    @FindBy(css = "button.fc-nextCalendar-button")
+    public WebElement nextIcon;
+
+    @FindBy(xpath = "//td[.//span[contains(text(), 'CHEMISTRY')]]")
+    public WebElement lessonBox;
+
+    @FindBy(xpath = "//*[name()='svg' and @data-icon='video']")
+    public WebElement recordingButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Grading')]")
+    public WebElement gradingButton;
+
+    @FindBy(xpath = "//ms-standard-button[@icon='print']//button")
+    public WebElement printIcon;
 }
