@@ -11,6 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class ParentPages extends GWD {
     public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
@@ -98,4 +101,24 @@ public class ParentPages extends GWD {
     public void waitForPresence(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
+
+    public void verifyTodayDateDisplayed() {
+        String today = LocalDate.now().format(DateTimeFormatter.ofPattern("dd"));
+        WebElement dateElement = GWD.getDriver().findElement(By.xpath("//span[contains(text(),'" + today + "')]"));
+        Assert.assertTrue(dateElement.isDisplayed());
+    }
+
+    public WebElement waitUntilClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void verifyElementContainsText(WebElement element, String text) {
+        if (!element.getText().contains(text)) {
+            throw new AssertionError("Text not found in element: " + text);
+        }
+    }
 }
+
+
+

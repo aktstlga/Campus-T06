@@ -35,4 +35,7 @@ public class TopNav extends ParentPages {
 
     @FindBy(css = "mat-option span.mdc-list-item__primary-text")
     public List<WebElement> themeOptions;
+
+    @FindBy(xpath = "//span[contains(text(),'Calendar') and contains(@class,'mat-badge')]")
+    public WebElement calendarButton;
 }
