@@ -1,10 +1,13 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
+
+import java.util.Set;
 
 public class _02_LogoCheck {
     DialogContent DC = new DialogContent();
@@ -27,7 +30,15 @@ public class _02_LogoCheck {
 
     @And("The user should be redirected to Techno Study mainpage")
     public void theUserShouldBeRedirectedToTechnoStudyMainpage() {
-        //Switch window sonrasında kontrol unutma
+        String originalWindow = GWD.getDriver().getWindowHandle();
+        Set<String> allWindows = GWD.getDriver().getWindowHandles();
+
+        for (String windowHandle : allWindows) {
+            if (!windowHandle.equals(originalWindow)) {
+                GWD.getDriver().switchTo().window(windowHandle);
+                break;
+            }
+        }
         DialogContent.quitDriver();
     }
 }
