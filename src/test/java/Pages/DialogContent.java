@@ -59,6 +59,6 @@ public class DialogContent extends ParentPages {
     @FindBy(xpath = "//span[contains(text(),'Grading')]")
     public WebElement gradingButton;
 
-    @FindBy(xpath = "//ms-standard-button[@icon='print']//button")
+    @FindBy(xpath = "//*[contains(@class, 'display-but-dont-print')]")
     public WebElement printIcon;
 }
