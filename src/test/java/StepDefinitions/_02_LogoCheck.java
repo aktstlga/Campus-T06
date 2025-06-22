@@ -28,7 +28,7 @@ public class _02_LogoCheck {
         DC.myClick(DC.logoButton);
     }
 
-    @And("The user should be redirected to Techno Study mainpage")
+    @And("The user should be directed to Techno Study mainpage")
     public void theUserShouldBeRedirectedToTechnoStudyMainpage() {
         String originalWindow = GWD.getDriver().getWindowHandle();
         Set<String> allWindows = GWD.getDriver().getWindowHandles();

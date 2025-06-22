@@ -38,8 +38,8 @@ public class _01_Login {
 
     @When("The user writes username and password and clicks on login button")
     public void theUserWritesUsernameAndPasswordAndClicksOnLoginButton() {
-        DC.mySendKeys(DC.username, "Student_6");
-        DC.mySendKeys(DC.password, "S12345");
+        DC.mySendKeys(DC.username, ConfigReader.getProperty("username"));
+        DC.mySendKeys(DC.password, ConfigReader.getProperty("password"));
         DC.myClick(DC.loginButton);
     }
 

@@ -74,4 +74,7 @@ public class DialogContent extends ParentPages {
     @FindBy(xpath = "//span[contains(text(),'Attach Files')]")
     public WebElement attachFilesText;
 
+    @FindBy(xpath = "//span[text()=' ATTENDANCE EXCUSES '] ")
+    public WebElement attendanceExcuses;
+
 }

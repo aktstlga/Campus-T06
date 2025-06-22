@@ -9,4 +9,4 @@ Feature: Logo button check
     Given The user verifies that is on Campus mainpage
     And Techno Study Logo on the left corner of page should be visible
     Then The user clicks on the Techno Study logo
-    And The user should be redirected to Techno Study mainpage
+    And The user should be directed to Techno Study mainpage

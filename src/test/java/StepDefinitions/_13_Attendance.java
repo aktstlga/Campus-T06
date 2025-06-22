@@ -15,9 +15,9 @@ public class _13_Attendance {
 
     @When("The user clicks on the Attendance Excecuses button")
     public void clickAttendanceExcuses() {
-        GWD Driver;
-        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
-        js.executeScript("arguments[0].click();", dc.attendanceExcusesTab);
+        dc.scrollToElement(dc.attendanceExcuses);
+        dc.waitUntilVisible(dc.attendanceExcuses);
+        dc.myClick(dc.attendanceExcuses);
     }
 
 
