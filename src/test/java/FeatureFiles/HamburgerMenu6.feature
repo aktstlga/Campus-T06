@@ -5,5 +5,5 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu click
-    Given MY Finance payment
+    Given Ease of Payment Tracking by Viewing Course Installment Details on the Finance Page
 

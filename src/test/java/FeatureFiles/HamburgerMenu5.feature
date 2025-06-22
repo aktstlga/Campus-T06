@@ -5,5 +5,5 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu click
-    Given MY Finance click
+    Given Easy Online Payment Opportunity by Entering the Finance Section from the Hamburger Menu
 
