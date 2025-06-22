@@ -5,4 +5,4 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu click
-    Given Amount payment
+    Given Paying Course Installments by Paying $235 with Stripe Infrastructure

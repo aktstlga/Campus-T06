@@ -5,6 +5,6 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu click
-    Given  permanent delete and message recovery
+    Given Flexibility to Edit Messages with Undelete or Permanent Delete
 
 

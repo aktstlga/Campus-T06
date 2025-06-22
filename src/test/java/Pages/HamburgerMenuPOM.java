@@ -52,11 +52,17 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement student;
     @FindBy(xpath = "//*[text()='Fee/Balance Detail']")
     public WebElement feeBalance;
+    @FindBy(xpath = "//*[text()='Online Payment']")
+    public WebElement onlinePayment;
     @FindBy(xpath = "//div[@class='mdc-radio']")
     public WebElement stripe;
+
+    @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[2]")
+    public WebElement fullPayment;
+
     @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[4]")
     public WebElement payment;
-    @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[5]")
+    @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[4]")
     public WebElement pay;
     @FindBy(xpath = "(//*[text()='Pay'])[2]")
     public WebElement payButton;
@@ -64,12 +70,10 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement amount;
     @FindBy(css = "iframe[title='Secure payment input frame']")
     public  WebElement iframe;
-
-
     @FindBy(xpath = "//div[@class='p-CardNumberInput']/div/input")
     public WebElement cardNumber;
-
     @FindBy(xpath = "(//div[@class='p-Input'])[2]/input")
     public WebElement expirationDate;
-
+    @FindBy(xpath = "(//div[@class='p-Input'])[3]/input")
+    public WebElement securityCode;
 }

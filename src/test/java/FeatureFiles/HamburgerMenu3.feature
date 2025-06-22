@@ -5,5 +5,5 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu click
-    Given Delete message
+    Given Ease of Editing Messages with Deleting Outbox Messages from the Hamburger Menu
 

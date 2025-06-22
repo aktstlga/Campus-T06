@@ -5,5 +5,5 @@ Feature:  Hamburger Menu functionality
     When The user writes username and password and clicks on login button
 
   Scenario: hamburger menu  click
-    Given Messaging clickable
+    Given Effective Message Management with Messages Link in Hamburger Menu
 

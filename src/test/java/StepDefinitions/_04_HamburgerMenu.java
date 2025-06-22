@@ -7,8 +7,8 @@ import io.cucumber.java.en.*;
 public class _04_HamburgerMenu {
     HamburgerMenuPOM H = new HamburgerMenuPOM();
 
-    @Given("Messaging clickable")
-    public void messaging_clickable() {
+    @Given("Effective Message Management with Messages Link in Hamburger Menu")
+    public void effectiveMessageManagementWithMessagesLinkInHamburgerMenu() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.messaging);
         H.myClick(H.sendMessage);
@@ -23,8 +23,8 @@ public class _04_HamburgerMenu {
         H.myClick(H.trash);
     }
 
-    @Given("send message")
-    public void sendMessage() {
+    @Given("Direct Communication with Teachers and Mentors by Sending Messages from the Hamburger Menu")
+    public void directCommunicationWithTeachersAndMentorsBySendingMessagesFromTheHamburgerMenu() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.messaging);
         H.myClick(H.sendMessage);
@@ -38,8 +38,8 @@ public class _04_HamburgerMenu {
         H.myClick(H.outbox);
     }
 
-    @Given("Delete message")
-    public void deleteMessage() {
+    @Given("Ease of Editing Messages with Deleting Outbox Messages from the Hamburger Menu")
+    public void easeOfEditingMessagesWithDeletingOutboxMessagesFromTheHamburgerMenu() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.messaging);
         H.myClick(H.outbox);
@@ -47,8 +47,8 @@ public class _04_HamburgerMenu {
         H.myClick(H.yes);
     }
 
-    @Given("permanent delete and message recovery")
-    public void permanentDeleteAndMessageRecovery() {
+    @Given("Flexibility to Edit Messages with Undelete or Permanent Delete")
+    public void flexibilityToEditMessagesWithUndeleteOrPermanentDelete() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.messaging);
         H.myClick(H.trash);
@@ -60,15 +60,15 @@ public class _04_HamburgerMenu {
         H.myClick(H.restore);
     }
 
-    @Given("MY Finance click")
-    public void myFinanceClick() {
+    @Given("Easy Online Payment Opportunity by Entering the Finance Section from the Hamburger Menu")
+    public void easyOnlinePaymentOpportunityByEnteringTheFinanceSectionFromTheHamburgerMenu() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.finance);
         H.myClick(H.myFinance);
     }
 
-    @Given("MY Finance payment")
-    public void myFinancePayment() {
+    @Given("Ease of Payment Tracking by Viewing Course Installment Details on the Finance Page")
+    public void easeOfPaymentTrackingByViewingCourseInstallmentDetailsOnTheFinancePage() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.finance);
         H.myClick(H.myFinance);
@@ -76,8 +76,8 @@ public class _04_HamburgerMenu {
         H.myClick(H.feeBalance);
     }
 
-    @Given("Online payment")
-    public void onlinePayment() {
+    @Given("Payment Confirmation with Display of Decrease in Remaining Debt in Balance Section when I Make Payment")
+    public void paymentConfirmationWithDisplayOfDecreaseInRemainingDebtInBalanceSectionWhenIMakePayment() {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.finance);
         H.myClick(H.myFinance);
@@ -86,21 +86,26 @@ public class _04_HamburgerMenu {
         H.myClick(H.payment);
         GWD.getDriver().switchTo().frame(H.iframe);
         H.mySendKeys(H.cardNumber, "4242 4242 4242 4242");
-        H.mySendKeys(H.cardNumber, "12/14");
+        H.mySendKeys(H.expirationDate, "12/29");
+        H.mySendKeys(H.securityCode, "305");
     }
 
-    @Given("Amount payment")
-    public void amountPayment() {
+    @Given("Paying Course Installments by Paying ${int} with Stripe Infrastructure")
+    public void payingCourseInstallmentsByPaying$WithStripeInfrastructure(int arg0) {
         H.myClick(H.hamburgerMenu);
         H.hoverOver(H.finance);
         H.myClick(H.myFinance);
         H.myClick(H.student);
         H.myClick(H.stripe);
-        H.myClick(H.payment);
+        H.myClick(H.fullPayment);
         H.myClick(H.pay);
-        H.mySendKeys(H.amount,"235");
-        H.myClick(H.payment);
+        H.mySendKeys(H.amount, "235");
+        H.myClick(H.fullPayment);
         H.myClick(H.pay);
         H.clickWithJS(H.payButton);
+        GWD.getDriver().switchTo().frame(H.iframe);
+        H.mySendKeys(H.cardNumber, "4242 4242 4242 4242");
+        H.mySendKeys(H.expirationDate, "12/29");
+        H.mySendKeys(H.securityCode, "305");
     }
 }
