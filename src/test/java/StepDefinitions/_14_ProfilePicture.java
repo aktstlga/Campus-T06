@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 
-public class _02_ProfilePicture {
+public class _14_ProfilePicture {
     TopNav TN = new TopNav();
     DialogContent DC = new DialogContent();
 

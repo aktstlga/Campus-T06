@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class _03_ProfileTheme {
+public class _15_ProfileTheme {
     TopNav TN = new TopNav();
     DialogContent DC = new DialogContent();
 

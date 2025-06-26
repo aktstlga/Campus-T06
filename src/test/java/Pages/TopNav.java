@@ -38,4 +38,34 @@ public class TopNav extends ParentPages {
 
     @FindBy(xpath = "//span[contains(text(),'Calendar') and contains(@class,'mat-badge')]")
     public WebElement calendarButton;
+
+    @FindBy(xpath = "//ms-layout-menu-button[@page='ASSIGNMENT']//button")
+    public WebElement assignmentsButton;
+
+    @FindBy(xpath = "//ms-icon-button[@icon='comments-alt']/button")
+    public List<WebElement> discussionButtons;
+
+    @FindBy(css = "div.mat-mdc-dialog-surface.mdc-dialog__surface")
+    public WebElement discussionDialogSurface;
+
+    @FindBy(css = "span.title.dialog-title")
+    public WebElement discussionPanelDynamicTitle;
+
+    @FindBy(css = "mat-selection-list.mat-mdc-selection-list mat-list-option")
+    public List<WebElement> chatListOptions;
+
+    @FindBy(css = "ms-standard-button[icon='messages'] button")
+    public WebElement chatsButton;
+
+    @FindBy(css = "textarea[formcontrolname='commentText']")
+    public WebElement messageInput;
+
+    @FindBy(xpath = "//ms-icon-button[@icon='paper-plane']/button")
+    public WebElement sendMessageButton;
+
+    @FindBy(css = "button[aria-label='Close dialog']")
+    public WebElement closeDialogButton;
+
+    @FindBy(xpath = "(//ms-icon-button[@icon='paperclip']/button)[2]")
+    public WebElement attachmentButton;
 }
