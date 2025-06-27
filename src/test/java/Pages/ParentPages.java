@@ -13,6 +13,8 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Random;
 
 public class ParentPages extends GWD {
     public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
@@ -117,7 +119,18 @@ public class ParentPages extends GWD {
             throw new AssertionError("Text not found in element: " + text);
         }
     }
+
+    public void waitUntilAllVisible(List<WebElement> elements) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
+
+    public void clickRandomElementFromList(List<WebElement> elements) {
+        if (elements == null || elements.isEmpty()) {
+            Assert.fail("The element list is empty or null!");
+        }
+        WebElement chosenElement = elements.get(new Random().nextInt(elements.size()));
+        scrollToElement(chosenElement);
+        chosenElement.click();
+    }
 }
-
-
-
