@@ -69,11 +69,30 @@ public class HamburgerMenuPOM extends ParentPages {
     @FindBy(xpath = "//ms-currency-field[@id='ms-currency-field-0']/input")
     public WebElement amount;
     @FindBy(css = "iframe[title='Secure payment input frame']")
-    public  WebElement iframe;
+    public WebElement iframe;
     @FindBy(xpath = "//div[@class='p-CardNumberInput']/div/input")
     public WebElement cardNumber;
     @FindBy(xpath = "(//div[@class='p-Input'])[2]/input")
     public WebElement expirationDate;
     @FindBy(xpath = "(//div[@class='p-Input'])[3]/input")
     public WebElement securityCode;
+
+    @FindBy(xpath = "(//span[text()='Attendance'])[3]")
+    public WebElement attendanceButton;
+
+    @FindBy(xpath = "(//span[text()='Attendance Excuses (Parents)'])")
+    public WebElement attendanceExcusesButton;
+
+    @FindBy(xpath = "(//span[text()='Video Conference'])")
+    public WebElement videoConferenceButton;
+
+    @FindBy(xpath = "(//span[text()='Video Meetings'])")
+    public WebElement videoMeetingsButton;
+
+    @FindBy(xpath = "(//span[text()='Surveys'])")
+    public WebElement surveyButton;
+
+    @FindBy(xpath = "(//span[text()='My Surveys'])")
+    public WebElement mySurveyButton;
+
 }

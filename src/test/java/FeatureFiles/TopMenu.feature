@@ -12,4 +12,5 @@ Feature: Top Navigation Main Menu Items Functionality
       | coursesButton     |
       | attendanceButton  |
       | assignmentsButton |
-    Then The user clicks on the
+    Then The user clicks on the Hamburger menu
+    And The user clicks on Profile menu

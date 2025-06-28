@@ -3,6 +3,7 @@ package Pages;
 import Utilities.GWD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -132,6 +133,26 @@ public class ParentPages extends GWD {
         WebElement chosenElement = elements.get(new Random().nextInt(elements.size()));
         scrollToElement(chosenElement);
         chosenElement.click();
+    }
+
+    public void topNavClick(WebElement firstElement, WebElement secondElement, WebElement thirdElement, String text){
+        jsClick(firstElement);
+        hoverOver(secondElement);
+        jsClick(thirdElement);
+        verifyUrlContains(text);
+    }
+    public void topNavClick(WebElement firstElement, WebElement secondElement, String text){
+        jsClick(firstElement);
+        jsClick(secondElement);
+        verifyUrlContains(text);
+    }
+    public void clickEsc(WebElement element, WebElement secondElement){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        jsClick(element);
+        wait.until(ExpectedConditions.visibilityOfAllElements(secondElement));
+        Assert.assertTrue(secondElement.isDisplayed());
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 }
 
