@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.DialogContent;
 import Pages.TopNav;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,6 @@ import java.util.List;
 
 public class _15_ProfileTheme {
     TopNav TN = new TopNav();
-    DialogContent DC = new DialogContent();
 
     @And("The user selects all themes one by one and saves")
     public void selectAllThemesOneByOneAndSave() {

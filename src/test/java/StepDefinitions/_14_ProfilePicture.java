@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.DialogContent;
 import Pages.TopNav;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,16 +8,15 @@ import org.openqa.selenium.By;
 
 public class _14_ProfilePicture {
     TopNav TN = new TopNav();
-    DialogContent DC = new DialogContent();
 
     @Given("The user navigates to profile settings")
-    public void navigateToProfileSettings(){
+    public void navigateToProfileSettings() {
         TN.myClick(TN.profileSettings);
         TN.myClick(TN.settings);
     }
 
     @And("The user uploads a new profile picture")
-    public void uploadNewProfilePicture(){
+    public void uploadNewProfilePicture() {
         String filePath = System.getProperty("user.home") + "\\Desktop\\profile.png";
         By uploadPictureBy = By.cssSelector("input[type='file'][accept='.jpg,.jpeg,.png,.avif']");
         TN.myClick(TN.uploadPicture);

@@ -60,7 +60,6 @@ public class _20_AssingmentsButtonsControl {
         TN.waitUntilAllVisible(TN.submitButton);
         TN.clickRandomElementFromList(TN.submitButton);
         System.out.println("Submit ikonuna tıklama başarılı / Submit icon button clicked successfully.");
-
     }
 
     @Then("The user should see the submission dialog")
@@ -71,7 +70,3 @@ public class _20_AssingmentsButtonsControl {
         Assert.assertTrue(titleText.contains("Submission Attempt(s):"), "Dialog başlığı beklenilen formatta değil!");
     }
 }
-
-
-
-
