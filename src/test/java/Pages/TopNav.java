@@ -83,4 +83,29 @@ public class TopNav extends ParentPages {
 
     @FindBy(xpath = "//ms-icon-button[@icon='file-import']/button")
     public List<WebElement> submitButton;
+
+    @FindBy(xpath = "//ms-layout-menu-button[@icon='users-class']/button")
+    public WebElement attendanceButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Grading')]")
+    public WebElement gradingButton;
+
+    @FindBy(xpath = "(//span[contains(text(),'Courses')])[1]")
+    public WebElement coursesButton;
+
+    public WebElement topNavElements(String element) {
+        switch (element) {
+            case "gradingButton":
+                return this.gradingButton;
+            case "calendarButton":
+                return this.calendarButton;
+            case "coursesButton":
+                return this.coursesButton;
+            case "attendanceButton":
+                return this.attendanceButton;
+            case "assignmentsButton":
+                return this.assignmentsButton;
+        }
+        return null;
+    }
 }
