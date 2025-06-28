@@ -93,6 +93,24 @@ public class TopNav extends ParentPages {
     @FindBy(xpath = "(//span[contains(text(),'Courses')])[1]")
     public WebElement coursesButton;
 
+    @FindBy(xpath = "//user-announcement-bell/button")
+    public WebElement notificationButton;
+
+    @FindBy(css = "[fxlayoutalign='space-between center']")
+    public WebElement dialog;
+
+    @FindBy(xpath = "//user-message-bell/button")
+    public WebElement messeagesInfo;
+
+    @FindBy(xpath = "//user-message-list-dialog//ms-dialog//simple-dialog-title")
+    public WebElement dialogMesseage;
+
+    @FindBy(xpath = "//span[text()='My Certificates']")
+    public WebElement myCertificates;
+
+    @FindBy(xpath = "//span[text()='My Files']")
+    public WebElement myFiles;
+
     public WebElement topNavElements(String element) {
         switch (element) {
             case "gradingButton":
