@@ -126,4 +126,34 @@ public class TopNav extends ParentPages {
         }
         return null;
     }
+
+    @FindBy(css = "iframe.tox-edit-area__iframe")
+    public WebElement richTextIframe;
+
+    @FindBy(css = "body.mce-content-body")
+    public WebElement richTextEditorBody;
+
+    @FindBy(xpath = "//ms-button[@icon='save']/button")
+    public WebElement saveAsDraftButton;
+
+    @FindBy(xpath = "//ms-confirm-button[@icon='file-import']/button")
+    public WebElement submitButtonPanel;
+
+    @FindBy(xpath = "//app-simple-dialog//button[.//span[normalize-space(text())='Yes']]")
+    public WebElement confirmYesButton;
+
+    @FindBy(xpath = "//div[@role='menubar']//button[.//span[text()='Table']]")
+    public WebElement tableMenuBarButton;
+
+    @FindBy(xpath = "//div[@role='menu']//div[contains(@class,'tox-collection__item-label') and text()='Table']")
+    public WebElement tableMenuOption;
+
+    @FindBy(css = "div.tox-insert-table-picker div[role='button'][aria-label='2 columns, 2 rows']")
+    public WebElement twoByTwoTableOption;
+
+    @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item') and .//span[contains(text(), 'From Local')]]")
+    public WebElement fromLocalOption;
+
+    @FindBy(xpath = "//button[.//span[text()='Attach Files...']]")
+    public WebElement assignmentsAttachmentButton;
 }

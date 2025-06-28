@@ -131,8 +131,10 @@ public class ParentPages extends GWD {
             Assert.fail("The element list is empty or null!");
         }
         WebElement chosenElement = elements.get(new Random().nextInt(elements.size()));
-        scrollToElement(chosenElement);
-        chosenElement.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(chosenElement));
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].click();", chosenElement);
     }
 
     public void topNavClick(WebElement firstElement, WebElement secondElement, WebElement thirdElement, String text){
@@ -154,7 +156,27 @@ public class ParentPages extends GWD {
         Assert.assertTrue(secondElement.isDisplayed());
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
+
+    public boolean waitForToastMessage(String message, int timeoutSeconds) {
+        boolean found = false;
+        int attempts = timeoutSeconds * 5;
+        for (int i = 0; i < attempts; i++) {
+            String bodyText = (String) ((JavascriptExecutor) GWD.getDriver())
+                    .executeScript("return document.body.innerText");
+            if (bodyText.contains(message)) {
+                found = true;
+                break;
+            }
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return found;
+    }
 }
+
 
 
 
