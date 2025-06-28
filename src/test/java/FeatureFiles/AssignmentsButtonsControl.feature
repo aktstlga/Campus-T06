@@ -16,3 +16,4 @@ Feature: Assignments Buttons and Details Page Control
     And The user returns to the Assignments page
     When The user clicks the 'submit' icon on a random assignment card
     Then The user should see the submission dialog
+

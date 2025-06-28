@@ -71,3 +71,4 @@ public class _20_AssingmentsButtonsControl {
         Assert.assertTrue(titleText.contains("Submission Attempt(s):"), "Dialog başlığı beklenilen formatta değil!");
     }
 }
+
