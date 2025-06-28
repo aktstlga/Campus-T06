@@ -68,4 +68,19 @@ public class TopNav extends ParentPages {
 
     @FindBy(xpath = "(//ms-icon-button[@icon='paperclip']/button)[2]")
     public WebElement attachmentButton;
+
+    @FindBy(xpath = "//ms-icon-button[@icon='info']/button")
+    public List<WebElement> infoIconButtons;
+
+    @FindBy(xpath = "//*[@id='container-3']/my-assignments-form-page/my-assignments-form/div/div/div/div/div[1]/div[1]")
+    public WebElement infoPanelParentDiv;
+
+    @FindBy(xpath = "//div[contains(@style, 'cursor: pointer') and contains(@fxlayoutalign, 'space-between center')]")
+    public List<WebElement> spacePanel;
+
+    @FindBy(xpath = "//mat-toolbar-row[contains(@class,'mat-toolbar-row')]//span[contains(@class,'dialog-title')]")
+    public WebElement submissionPanel;
+
+    @FindBy(xpath = "//ms-icon-button[@icon='file-import']/button")
+    public List<WebElement> submitButton;
 }
