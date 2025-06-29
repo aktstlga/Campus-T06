@@ -159,4 +159,19 @@ public class TopNav extends ParentPages {
 
     @FindBy(xpath = "//*[@class='assignment']/div")
     public List<WebElement> assignmentCards;
+
+    @FindBy(css = "button[aria-label='Open calendar']")
+    public WebElement datePickerToggleButton;
+
+    @FindBy(xpath = "//mat-card[contains(@class,'custom-range')]//button")
+    public List<WebElement> quickDateButtons;
+
+    @FindBy(xpath = "//*[@id=\"container-3\"]/ms-assignment-panel-student/div/div/div/div[1]/div[2]/div[1]/button")
+    public WebElement showByDropdown;
+
+    @FindBy(xpath = "//*[@class='mat-mdc-menu-content']/button")
+    public List<WebElement> showByOptions;
+
+    @FindBy(xpath = "//*[@id='container-3']//strong")
+    public List<WebElement> assignmentHeaders;
 }

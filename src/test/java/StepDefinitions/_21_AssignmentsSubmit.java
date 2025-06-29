@@ -11,7 +11,6 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.time.Duration;
 
 public class _21_AssignmentsSubmit {
     TopNav TN = new TopNav();
