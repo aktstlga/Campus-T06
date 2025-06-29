@@ -12,7 +12,6 @@ import org.testng.Assert;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-
 import java.util.List;
 
 public class _19_AssignmentsDiscussion {
@@ -63,7 +62,6 @@ public class _19_AssignmentsDiscussion {
                 "Discussion panel displayed and content verified successfully.");
     }
 
-    //-------------------------------------------------
     @When("The user types message {string} into the input field")
     public void messageInput(String message) {
         TN.mySendKeys(TN.messageInput, message);
