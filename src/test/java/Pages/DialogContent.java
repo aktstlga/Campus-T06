@@ -61,4 +61,22 @@ public class DialogContent extends ParentPages {
 
     @FindBy(xpath = "//*[contains(@class, 'display-but-dont-print')]")
     public WebElement printIcon;
+
+    @FindBy(xpath = "//ms-layout-menu-button[@class='mat-mdc-tooltip-trigger']/button")
+    public WebElement assignments;
+
+    @FindBy(xpath = "(//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple'])[22]")
+    public WebElement discussion;
+
+    @FindBy(xpath = "(//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple'])[47]")
+    public WebElement persons;
+
+    @FindBy(xpath = "//ms-standard-button[@id='ms-standard-button-2']/button")
+    public WebElement chats;
+
+    @FindBy(xpath = "(//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple'])[51]")
+    public WebElement attachFiles;
+
+
+
 }

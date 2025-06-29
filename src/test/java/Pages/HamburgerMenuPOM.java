@@ -42,8 +42,6 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement delete;
     @FindBy(xpath = "//ms-standard-button[@id='ms-standard-button-42']")
     public WebElement restore;
-
-
     @FindBy(xpath = "//*[text()='Finance']")
     public WebElement finance;
     @FindBy(xpath = "//*[text()='My Finance']")
@@ -56,10 +54,8 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement onlinePayment;
     @FindBy(xpath = "//div[@class='mdc-radio']")
     public WebElement stripe;
-
     @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[2]")
     public WebElement fullPayment;
-
     @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[4]")
     public WebElement payment;
     @FindBy(xpath = "(//div[@class='mdc-form-field mat-internal-form-field'])[4]")
@@ -76,4 +72,8 @@ public class HamburgerMenuPOM extends ParentPages {
     public WebElement expirationDate;
     @FindBy(xpath = "(//div[@class='p-Input'])[3]/input")
     public WebElement securityCode;
+    @FindBy(xpath = "(//div[@class='ng-tns-c3768754809-1 ng-star-inserted'])[7]/button")
+    public WebElement dowloading;
+    @FindBy(xpath = "(//div[@class='mat-mdc-menu-content'])/button[1]")
+    public WebElement excel;
 }

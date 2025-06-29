@@ -108,4 +108,13 @@ public class _04_HamburgerMenu {
         H.mySendKeys(H.expirationDate, "12/29");
         H.mySendKeys(H.securityCode, "305");
     }
+
+    @Given("Downloading Total Payment Amount and Remaining Debt from Payment Page in Excel PDF Format")
+    public void downloadingTotalPaymentAmountAndRemainingDebtFromPaymentPageInExcelPDFFormat() {
+        H.myClick(H.hamburgerMenu);
+        H.hoverOver(H.finance);
+        H.myClick(H.myFinance);
+        H.myClick(H.dowloading);
+        H.myClick(H.excel);
+    }
 }
