@@ -137,18 +137,20 @@ public class ParentPages extends GWD {
         js.executeScript("arguments[0].click();", chosenElement);
     }
 
-    public void topNavClick(WebElement firstElement, WebElement secondElement, WebElement thirdElement, String text){
+    public void topNavClick(WebElement firstElement, WebElement secondElement, WebElement thirdElement, String text) {
         jsClick(firstElement);
         hoverOver(secondElement);
         jsClick(thirdElement);
         verifyUrlContains(text);
     }
-    public void topNavClick(WebElement firstElement, WebElement secondElement, String text){
+
+    public void topNavClick(WebElement firstElement, WebElement secondElement, String text) {
         jsClick(firstElement);
         jsClick(secondElement);
         verifyUrlContains(text);
     }
-    public void clickEsc(WebElement element, WebElement secondElement){
+
+    public void clickEsc(WebElement element, WebElement secondElement) {
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         jsClick(element);
@@ -175,8 +177,25 @@ public class ParentPages extends GWD {
         }
         return found;
     }
+
+    public void scrollToBottomAndWaitForElements(List<WebElement> elements, int timeoutSeconds) {
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(timeoutSeconds));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
+
+    public void scrollToEachElement(List<WebElement> elements) {
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+
+        for (WebElement element : elements) {
+            js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
 }
-
-
-
-

@@ -156,4 +156,7 @@ public class TopNav extends ParentPages {
 
     @FindBy(xpath = "//button[.//span[text()='Attach Files...']]")
     public WebElement assignmentsAttachmentButton;
+
+    @FindBy(xpath = "//*[@class='assignment']/div")
+    public List<WebElement> assignmentCards;
 }
