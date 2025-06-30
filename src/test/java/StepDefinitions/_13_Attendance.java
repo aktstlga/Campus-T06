@@ -12,7 +12,7 @@ import java.time.Duration;
 public class _13_Attendance {
     DialogContent dc = new DialogContent();
 
-    @Given("The user clicks the Attendance button from the top navigation")
+    @Given("The user clicks the Attendance button from top navigation")
     public void clickAttendanceButton() {
         dc.myClick(dc.attendanceButton);
     }

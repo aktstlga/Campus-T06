@@ -5,7 +5,7 @@ Feature: Attendance functionality
     When The user writes username and password and clicks on login button
 
   Scenario: Student should be able to view attendance
-    Given The user clicks the Attendance button from the top navigation
+    Given The user clicks the Attendance button from top navigation
     When The user clicks on the Attendance Excuses button
     Then The user should able to reports into excuses
 
