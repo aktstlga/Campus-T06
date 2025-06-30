@@ -6,6 +6,6 @@ Feature: Attendance functionality
 
   Scenario: Student should be able to view attendance
     Given The user clicks the Attendance button from the top navigation
-    When The user clicks on the Attendance Excecuses button
-    Then The user should able to excecuses
-    Then The user should able to reports into excecuses
+    When The user clicks on the Attendance Excuses button
+    Then The user should able to reports into excuses
+

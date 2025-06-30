@@ -65,13 +65,6 @@ public class DialogContent extends ParentPages {
     @FindBy(xpath = "//ms-layout-menu-button[@icon='users-class']/button")
     public WebElement attendanceButton;
 
-    @FindBy(xpath = "//div[@id='mat-tab-group-1-label-2']")
-    public WebElement attendanceExcusesTab;
-
-    @FindBy(xpath = "//span[@class='sent' and contains(text(),'Sent')]")
-    public WebElement sentStatus;
-
-    @FindBy(xpath = "//span[contains(text(),'Attach Files')]")
-    public WebElement attachFilesText;
-
+    @FindBy(xpath = "//span[text()=' ATTENDANCE EXCUSES '] ")
+    public WebElement attendanceExcuses;
 }
